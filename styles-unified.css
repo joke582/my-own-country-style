@@ -1,0 +1,170 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+.navigation-outer {
+    width: 100%;
+    background-color: hwb(28 4% 16%);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 1rem;
+}
+
+.favicon {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.favicon:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    text-align: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.navlink {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+.navlink:hover, .navlink:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffd2a0;
+    outline: none;
+}
+
+
+.hero-outer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    padding: 2rem;
+    text-align: center;
+    font-family: cursive;
+    color: gray;
+    font-size: 1.2rem;
+}
+
+
+.showcase-inner {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.showcase-item {
+    width: 90%;
+    max-width: 350px;
+    border: 1px solid #aaa5;
+    border-radius: 1rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.showcase-item:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+
+.contact-hero {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.address {
+    text-align: center;
+    color: gray;
+}
+
+
+.footer {
+    background-color: hwb(28 4% 16%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    .showcase-inner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .showcase-item {
+        width: 45%;
+    }
+
+    .contact-hero {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .navigation-outer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem 5%;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        font-size: 1.8rem;
+        max-width: 800px;
+    }
+
+    .showcase-item {
+        width: 30%;
+    }
+}
